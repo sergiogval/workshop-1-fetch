@@ -22,20 +22,20 @@ window
       // crear imagen
       const imagen = document.createElement("img");
       imagen.src = `${urlBase}${item.image}`;
-      imagen.className = "w-full";
+      imagen.className = "w-1/5 inline-flex";
       // crear titulo
       const titulo = document.createElement("h2");
       titulo.textContent = item.name;
-      titulo.style.fontSize = "3rem";
+      titulo.className = "3-xl";
       // crear precio
       const price = document.createElement("div");
       price.textContent = item.price;
 
       const container = document.createElement("div");
+      container.className = "w-3/6 inline-flex align-center card";
       container.append(imagen, titulo, price);
 
       todosLosItems.push(container);
-      console.log(todosLosItems);
     });
 
     appNode.append(...todosLosItems);
